@@ -120,7 +120,7 @@ logger.info(f"antidetect_browser {MODULE_VERSION} loaded from {_MODULE_FILE}")
 # Proxy API Loader — Fetch proxies from external API (replaces proxy.json)
 # ====================================================================
 
-PROXY_API_URL = 'https://nodejsclusters-213001-0.cloudclusters.net/api/external/proxies/range'
+PROXY_API_URL = 'https://nodejsclusters-213001-0.cloudclusters.net/api/external/proxies/adsterra-safe'
 PROXY_API_KEY = 'pm_957328ec98d6ecbd6da178b77c8282fb'
 PROXY_API_DEFAULT_PAGE_SIZE = 30
 PROXY_API_DEFAULT_FORMAT = 'txt'
