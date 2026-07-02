@@ -1,41 +1,6 @@
 #!/usr/bin/env python3
 """
-Visit Bot Python — OPTIMIZED v9.5 (EffectiveCPMNetwork Detection + Auto Device Pool)
-======================================================================================
-
-v9.5 CHANGES:
-  1. NEW: EffectiveCPMNetwork native banner detection. Pola baru yang dipakai
-     publisher:
-       <script src="https://plXXXXX.effectivecpmnetwork.com/<hash>/invoke.js"></script>
-       <div id="container-<hash>"></div>
-     Selector baru: div[id^="container-"] + script[src*="effectivecpmnetwork"].
-  2. NEW: EffectiveCPMNetwork social banner detection (di halaman article).
-     Pola: <script src="https://plXXXXX.effectivecpmnetwork.com/.../...js">
-     tanpa container hash — script langsung inject iframe/widget.
-  3. NEW: discover_effective_cpm_native_ads()  — khusus home bottom
-     native banner (pl*.effectivecpmnetwork.com/invoke.js + container-HASH).
-  4. NEW: discover_effective_cpm_social_ads()  — khusus article view
-     social banner (pl*.effectivecpmnetwork.com/.../js).
-  5. NEW: discover_ads() di-extend untuk include pola effectivecpmnetwork
-     (agar fallback path juga mengenalinya).
-  6. NEW: AUTO DEVICE POOL — generate_device_pool(target_count) membuat
-     pool device unik sesuai --limit. Tidak lagi hardcode 4 device.
-     Pool dibangun dari kombinasi:
-       - 6 OS platform (Win/Mac/Linux/Android/iOS/iPadOS)
-       - 5+ device model per platform (Pixel, Galaxy, iPhone, iPad, dll)
-       - 5+ viewport per kategori (desktop/mobile/tablet)
-       - Chrome major version 137 (dapat di-override)
-       - 14+ nilai device_scale_factor, locale, timezone, referrer
-     Hasil: ribuan kombinasi unik → setiap user profile dapat device
-     fingerprint yang berbeda.
-  7. INTegrate: main() sekarang panggil generate_device_pool(args.limit)
-     sebelum loop user, simpan ke DEVICES global. setiap make_user_profile
-     pick device unik via index-based deterministic rotation.
-
-v9.4 (sebelumnya): Native AdSterra detection + deep click
-v9.3 (sebelumnya): urllib3 InsecureRequestWarning suppress + proxy leak fix
-v9.2 (sebelumnya): CDP cert fix + CONNECT pre-flight + robust retry
-v9.0 (sebelumnya): Anti-Detect Browser + Total Profile Sync
+Total Profile Sync
 """
 
 import os
