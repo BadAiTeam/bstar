@@ -150,7 +150,7 @@ PROXY_API_URL = PROXY_API_BASE_URL
 
 # Default AdsPower credentials (can be overridden via load_proxy_config args or env vars)
 ADSPOWER_DEFAULTS = {
-    'api_key': '0a9a0ceae5ea9e56065395e58ce43ace0092eda5d96b6ecd',
+    'api_key': 'ed64f37f79eb604f2cc0ef75bc0714d600936ad141621586',
     'mode': 'local',
     'base_url': 'http://127.0.0.1',
     'port': 50325,
