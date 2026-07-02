@@ -120,9 +120,9 @@ logger.info(f"antidetect_browser {MODULE_VERSION} loaded from {_MODULE_FILE}")
 # Proxy API Loader — Fetch proxies from external API (replaces proxy.json)
 # ====================================================================
 
-PROXY_API_URL = 'https://nodejsclusters-213001-0.cloudclusters.net/api/external/proxies/adsterra-safe'
+PROXY_API_URL = 'https://nodejsclusters-213001-0.cloudclusters.net/api/external/proxies/range'
 PROXY_API_KEY = 'pm_bfeedf02583bce9446b12b8ff2dcf7a4'
-PROXY_API_DEFAULT_PAGE_SIZE = 5
+PROXY_API_DEFAULT_PAGE_SIZE = 1-10
 PROXY_API_DEFAULT_FORMAT = 'txt'
 
 # Default AdsPower credentials (can be overridden via load_proxy_config args or env vars)
