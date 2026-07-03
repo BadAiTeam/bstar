@@ -292,12 +292,12 @@ def log_json():
         })
 
 
-def run_server(host='0.0.0.0', port=8090):
+def run_server(host='0.0.0.0', port=8080):
     """Run the Flask server in the current thread (blocking)."""
     app.run(host=host, port=port, threaded=True, debug=False, use_reloader=False)
 
 
-def start_server_in_thread(host='0.0.0.0', port=8090):
+def start_server_in_thread(host='0.0.0.0', port=8080):
     """Run the Flask server in a daemon thread (non-blocking)."""
     t = threading.Thread(target=run_server, args=(host, port), daemon=True)
     t.start()
